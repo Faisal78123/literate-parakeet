@@ -1,11 +1,14 @@
-name: CI
+name: Test for NCR
 on:
   workflow_dispatch:
 jobs:
   firstjob:
     runs-on: ubuntu-latest
     steps:
-      - name: connectivity test
+      - name: What is the runner IP address
         run: |
-          nc -vz 185.199.108.0 443
           curl ident.me
+      - name: connectivity test to NCR
+        run: |
+          nc -vz 153.84.5.134 443
+
