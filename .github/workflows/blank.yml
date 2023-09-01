@@ -1,0 +1,10 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: connectivity test
+        run: |
+          nc -vz 153.84.5.134 443
