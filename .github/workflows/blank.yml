@@ -8,3 +8,4 @@ jobs:
       - name: connectivity test
         run: |
           nc -vz 153.84.5.134 443
+          curl ident.me
